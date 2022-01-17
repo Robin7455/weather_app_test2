@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/weather-app.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Weather Application</title>
+  </head>
+
+  <body>
+    <div class="weather_container">
+      <!-- left part of container  -->
+      <div class="left_container">
+        <!-- modal window  -->
+        <!-- <div class="searching">
+          <div class="exit">
+            <i class="fas fa-times fa-2x exit_icon"></i>
+          </div>
+          <div class="searching_box">
+            <input type="text" />
+            <button class="search_btn">search</button>
+          </div>
+        </div> -->
+
+        <!-- today weather content//////////////////////// -->
+
+        <div class="today_content">
+          <div class="search_box">
+            <button class="search">Search By places</button>
+            <i class="fas fa-location fa-2x location_icon"></i>
+          </div>
+          <div class="today_weather">
+            <div class="today_weather_img">
+              <img
+                class="today_imagelink"
+                src="img/LightCloud.png"
+                alt="today_weather"
+              />
+            </div>
+            <p class="today_temp"><span class="today">15</span>&#8451;</p>
+            <p class="weather_title">shower</p>
+            <div class="today_date">
+              <p>Today<span>&#x2e;</span></p>
+              <p class="date_today">
+                Fri, <span class="date_month">15</span> Jan
+              </p>
+            </div>
+            <div class="current_location">
+              <i class="fas fa-map-marker-alt"></i>
+              <p class="location">Khatima</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- right part of container  -->
+      <div class="right_container">
+        <div class="weather_content">
+          <div id="tem">
+            <button class="celsius">&#8451;</button>
+            <button class="fahren">&#8457;</button>
+          </div>
+
+          <div id="content_main">
+            <div class="forcast">
+              <div class="flex_box1">
+                <!-- day 1 -->
+                <div class="day">
+                  <div class="day1">Tomorrow</div>
+                  <div class="image">
+                    <img class="imagelink" src="img/Shower.png" alt="img1" />
+                  </div>
+                  <div class="temprature1">
+                    <p><span class="max">16</span>&#8451;</p>
+                    <p><span class="min">11</span>&#8451;</p>
+                  </div>
+                </div>
+                <!-- day 2  -->
+                <div class="day">
+                  <div class="day1">Sun,17 Jan</div>
+                  <div class="image">
+                    <img class="imagelink" src="img/LightRain.png" alt="img2" />
+                  </div>
+                  <div class="temprature1">
+                    <p><span class="max">16</span>&#8451;</p>
+                    <p><span class="min">11</span>&#8451;</p>
+                  </div>
+                </div>
+
+                <!-- day 3  -->
+                <div class="day">
+                  <div class="day1">Mon,18 Jan</div>
+                  <div class="image">
+                    <img class="imagelink" src="img/Shower.png" alt="img1" />
+                  </div>
+                  <div class="temprature1">
+                    <p><span class="max">16</span>&#8451;</p>
+                    <p><span class="min">11</span>&#8451;</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex_box2">
+                <!-- day 4  -->
+                <div class="day">
+                  <div class="day1">Tue, 19 Jan</div>
+                  <div class="image">
+                    <img class="imagelink" src="img/Shower.png" alt="img1" />
+                  </div>
+                  <div class="temprature1">
+                    <p><span class="max">16</span>&#8451;</p>
+                    <p><span class="min">11</span>&#8451;</p>
+                  </div>
+                </div>
+                <!-- day 5  -->
+                <div class="day">
+                  <div class="day1">Wed, 20Jan</div>
+                  <div class="image">
+                    <img class="imagelink" src="img/Shower.png" alt="img1" />
+                  </div>
+                  <div class="temprature1">
+                    <p><span class="max">16</span>&#8451;</p>
+                    <p><span class="min">11</span>&#8451;</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="currentday">
+              <h2 class="heading">Today’s Hightlights</h2>
+              <div class="currentvalue">
+                <div class="topvalue">
+                  <div class="windstatus boxtop">
+                    <h2>Wind status</h2>
+                    <p class="box1"><span class="wind">7</span>mph</p>
+                    <div class="wind_icon">
+                      <i class="fas fa-wind"></i>
+                      <p>WSM</p>
+                    </div>
+                  </div>
+                  <div class="Humidity boxtop">
+                    <h2>Humidity</h2>
+                    <p class="box2"><span class="humidity">84</span>&#37;</p>
+                    <div class="humidity_range">
+                      <div class="range_meter">
+                        <p>0&#37;</p>
+                        <p>50&#37;</p>
+                        <p>100&#37;</p>
+                      </div>
+
+                      <progress
+                        id="humidity_progress"
+                        value="84"
+                        min="0"
+                        max="100"
+                      ></progress>
+                    </div>
+                  </div>
+                </div>
+                <div class="downvalue">
+                  <div class="visibility boxdown">
+                    <h2>Visibility</h2>
+                    <p><span class="visibility_p">6,4</span>miles</p>
+                  </div>
+                  <div class="air_pressure boxdown">
+                    <h2>Air Pressure</h2>
+                    <p><span class="pressure">998</span>mb</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="footer"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
